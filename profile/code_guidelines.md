@@ -4,9 +4,9 @@ El propósito de este documento es normalizar el desarrollo del equipo. De esta 
 
 ### Indice 
 
-* [Python](https://github.com/trabajo-profesional-fiuba/.github/main/profile/code_guidelines.md#python)
-* [REST API](https://github.com/trabajo-profesional-fiuba/.github/main/profile/code_guidelines.md#rest-api-)
-* [Github](https://github.com/trabajo-profesional-fiuba/.github/main/profile/code_guidelines.md#github)
+* [Python](https://github.com/trabajo-profesional-fiuba/.github/blob/main/profile/code_guidelines.md#python)
+* [REST API](https://github.com/trabajo-profesional-fiuba/.github/blob/main/profile/code_guidelines.md#rest-api-)
+* [Github](https://github.com/trabajo-profesional-fiuba/.github/blob/main/profile/code_guidelines.md#github)
 
 ## Python
 
