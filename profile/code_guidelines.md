@@ -2,6 +2,12 @@
 
 El propósito de este documento es normalizar el desarrollo del equipo. De esta manera se realiza un trabajo consistente y que sigue los standares y buenas prácticas de la industria.
 
+### Indice 
+
+* [Python](https://github.com/trabajo-profesional-fiuba/.github/edit/main/profile/code_guidelines.md#python)
+* [REST API](https://github.com/trabajo-profesional-fiuba/.github/edit/main/profile/code_guidelines.md#rest-api-)
+* [Github](https://github.com/trabajo-profesional-fiuba/.github/edit/main/profile/code_guidelines.md#github)
+
 ## Python
 
 Se seguirá un standard [PEP8](https://peps.python.org/pep-0008/) para el desarrollo en python. Este convencion posee algunas caracteristicas, por ejemplo:
