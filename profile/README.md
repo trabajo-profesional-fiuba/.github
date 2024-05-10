@@ -19,19 +19,18 @@
 
 En esta sección, proporciona una breve descripción de la API, su propósito y los beneficios que ofrece. Menciona cualquier contexto relevante o información importante que los usuarios deban saber antes de usar la API.
 
-Se recomienda fuertemente leer los **Code Guidelines**
+Se recomienda fuertemente leer los [**Code Guidelines**](https://github.com/trabajo-profesional-fiuba/.github/blob/main/profile/code_guidelines.md)
 
 ## Informe
 
 [Informe](https://docs.google.com/document/d/1OGQHTen0Jq10fhsqWkeuYwOUYCHxB5LMsyyRzwK2HSs/edit?usp=sharing)
 
-## Avances 💻
+## Arquitectura 👷
 
 ## Documentación 📗
 
 La documentación completa de la API se encuentra en este enlace. Asegúrate de incluir detalles sobre cómo los usuarios pueden acceder a la documentación y qué recursos encontrarán allí.
 
-[Documentación](https://trabajo-profesional-fiuba.readme.io/docs/getting-started)
 
 ## Postman 🚀
 
