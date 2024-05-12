@@ -113,3 +113,4 @@ A continuacion se describen algunos guidelines para poder trabajar en conjunto c
 - Cada ticket tiene su feature branch donde luego al commitear a master se hara un `squash and merge` para que la historia quede limpia
 - Se recomienda que cada feature branch debe llamarse `feat/repo-numero`, por ejemplo `feat/assigment-2`
 - Cada PR tiene que tener al menos un Approve y debe tener los builds en verde para que se mergee a `main`
+- POR FAVOR NO USAR `--force` en los rebase sino `--force-with-lease` 
