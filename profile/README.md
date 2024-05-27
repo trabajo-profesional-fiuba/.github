@@ -23,13 +23,16 @@ Se recomienda fuertemente leer los [**Code Guidelines**](https://github.com/trab
 
 ## Informe
 
-[Informe](https://docs.google.com/document/d/1OGQHTen0Jq10fhsqWkeuYwOUYCHxB5LMsyyRzwK2HSs/edit?usp=sharing)
+El informe tiene como objetivo formalizar el trabajo que se realiza durante los meses que dura el Trabajo Profesional. Se explica en el, varias decisiones, aspectos, conceptos y propositos que hacen que este trabajo tenga como resultado un trabajo final para la carrera de Ingenieria Informatica.
+
+Durante los meses de desarrollo se ira agregando, modificando y borrando diferentes aspectos del siguiente [Informe](https://docs.google.com/document/d/1OGQHTen0Jq10fhsqWkeuYwOUYCHxB5LMsyyRzwK2HSs/edit?usp=sharing). En el se encuentran secciones donde se detalla las distintas decisiones, algoritmos y pruebas que el equipo realizo. 
 
 ## Arquitectura 👷
 
+
 ## Documentación 📗
 
-La documentación completa de la API se encuentra en este enlace. Asegúrate de incluir detalles sobre cómo los usuarios pueden acceder a la documentación y qué recursos encontrarán allí.
+todo: Agregar diagramas UML
 
 
 ## Postman 🚀
