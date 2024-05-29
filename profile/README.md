@@ -32,6 +32,16 @@ Durante los meses de desarrollo se ira agregando, modificando y borrando diferen
 
 ## Documentación 📗
 
+### Task & Workflows 📑
+El equipo de desarrollo sigue la metodologia de trabajo agil, tomando componenentes de Scrum para poder organizar su trabajo de la mejor manera posible.
+
+Para eso cada tarea se encuentra descripta en el [Backlog](https://github.com/orgs/trabajo-profesional-fiuba/projects/1) donde se detalla la `Priority`, `Kind` y `Status`. De esta manera las tareas poseen diferentes categorias que hacen que el equipo elija en cada sprint cuales son las necesarias para aportar la mayor cantidad de valor.
+
+Ademas, las issues siguen un workflow que se encuentra en formato de tablero [Kanban](https://github.com/orgs/trabajo-profesional-fiuba/projects/1/views/2) donde cada tarea pasa por diferentes estados antes de ser cerrada.
+
+**Time Tracking** ⏲️. Para poder registrar la cantidad de tiempo que nos llevan las tareas se propone utilizar [Eventhout](https://app.everhour.com/) que al integrarlo con Github podremos agregar hrs a las Issues que se encuentran abiertas. Estos registros serviran como justificacion a preguntar relacionadas a features no implementadas por falta de tiempos suficiente
+
+### Diseño 🖌️
 todo: Agregar diagramas UML
 
 
