@@ -1,4 +1,4 @@
-# Disennio posible de entidades y estructuras
+# Diseño posible de entidades y estructuras
 
 El objetivo de este documento es alinear las diferentes entidades comunes que usa todo el equipo
 
@@ -86,6 +86,40 @@ class Topic{
 - title: String
 }
 
+class AssigmentResult{
+- id: int
+- groups: List<Group>
+- tutors: List<Tutor>
+- evaluators: List<Evaluators>
+
++ delivery_date(int group_id): DeliveryDate
++ delivery_date_evaluator(int evaluator_id)
+}
+
 @enduml
 ```
 ## Estructura del proyecto
+
+```
+assignment-service/
+├── pyproject.toml
+├── poetry.lock
+├── README.md
+├── .gitignore
+├── 
+├── src/
+│   └── algorithms/
+│       ├── __init__.py
+│       └── ...
+│   └── model/
+│       ├── group/
+│       ├── tutor/
+│       └── utils/
+│         ├── delivery_date/
+│         ├── evaluator.py
+│         ├── topic.py
+│── tests/
+│   ├── __init__.py
+│   └── ...
+    
+```
