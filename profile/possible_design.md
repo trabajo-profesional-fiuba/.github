@@ -15,7 +15,21 @@ abstract class Solver {
 }
 
 
-class DeliveryFlowSolver extends Solver {
+abstract class DeliverySolver extends Solver{
+~ available_dates: List<DeliveryDate>
++ solve(): AssigmentResult
+}
+
+abstract class GroupTutorSolver extends Solver{
+~ topics: List<DeliveryDate>
++ solve(): AssigmentResult
+}
+
+interface Formatter {}
+
+Solver o-up-Formatter
+
+class DeliveryFlowSolver extends DeliverySolver{
 - evaluators: evaluators
 - possible_dates: List<DeliveryDate>
 
@@ -27,48 +41,64 @@ class DeliveryFlowSolver extends Solver {
 + solve(): AssigmentResult 
 }
 
-class TopicTutorFlowSolver extends Solver {
+class TopicTutorFlowSolver extends GroupTutorSolver {
 + solve(): AssigmentResult 
 }
 
-class DeliveryLPSolver extends Solver {
+class DeliveryLPSolver extends DeliverySolver{
 + solve(): AssigmentResult 
 }
 
-abstract class Group {
+class Group {
 - id: int
 - tutor: Tutor
++ assign(item, Group group):void
+- assign_tutor(Tutor tutor)
+- assign_date(DeliveryDate dd)
++ preference_of(int item_id )
 }
 
-abstract class Tutor{
+class Tutor{
 - id: int
 - groups: List<Group>
+- name: String
+- email: String
++ assign_group(Group group):void
 }
 
-class FinalStateGroup extends Group{
+interface TutorState{}
+interface GroupState{}
+
+Group *-right- GroupState
+
+class FinalStateGroup implements GroupState {
 - avaliable_dates: List<DeliveryDate>
+- assigned_date: DeliveryDate
 - remove_dates(List<DeliveryDate> dates): void
 - is_tutored_by(Tutor tutor): bool
+- assign_date(DeliveryDate dd)
 + avaliable_dates(): List<DeliveryDate>
-+ id(): int
++ assign(item, Group group):void
+
 }
 
-class InitialStateGroup extends Group{
+class InitialStateGroup implements GroupState{
 - topics: List<Topic>
-+ assign_tutor(Tutor tutor):void
-+ id(): int
++ assign(item, Group group):void
+- assign_tutor(Tutor tutor)
 }
 
-class FinalStateTutor extends Tutor{
+class FinalStateTutor implements TutorState{
 - avaliable_dates: List<DeliveryDate>
+- assigned_dates: List<DeliveryDate>
 + avaliable_dates(): List<DeliveryDate>
 + id(): int
 }
 
-class InitialStateTutor extends Tutor{
+class InitialStateTutor implements TutorState{
 - topics: List<Topic>
-- group_capacity: int
-+ assign_group(Group group):void
+- global_capacity: int
+
 + id(): int
 }
 
@@ -82,7 +112,8 @@ class DeliveryDate{
 
 class Topic{
 - id: int
-- priority: int
+- cost: int
+- capacity: int
 - title: String
 }
 
@@ -95,6 +126,10 @@ class AssigmentResult{
 + delivery_date(int group_id): DeliveryDate
 + delivery_date_evaluator(int evaluator_id)
 }
+
+
+
+Tutor *-right- TutorState
 
 @enduml
 ```
