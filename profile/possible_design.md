@@ -160,3 +160,6 @@ assignment-service/
 │   └── ...
     
 ```
+## Possible Folder Structure
+
+![AssignmentService](https://github.com/trabajo-profesional-fiuba/.github/assets/75905945/f109eabb-8e45-456e-b08f-02c64df8d427)
