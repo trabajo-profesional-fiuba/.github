@@ -98,6 +98,8 @@ class AssigmentResult{
 
 @enduml
 ```
+![image](https://github.com/trabajo-profesional-fiuba/.github/assets/56161645/c2c17a25-bb0e-42ee-8d16-e6a4a919d0e0)
+
 ## Estructura del proyecto
 
 ```
