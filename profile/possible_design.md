@@ -21,13 +21,13 @@ abstract class DeliverySolver extends Solver{
 }
 
 abstract class GroupTutorSolver extends Solver{
-~ topics: List<DeliveryDate>
+~ topics: List<Topic>
 + solve(): AssigmentResult
 }
 
-interface Formatter {}
+interface OutputFormatter {}
 
-Solver o-up-Formatter
+Solver o-up-OutputFormatter
 
 class DeliveryFlowSolver extends DeliverySolver{
 - evaluators: evaluators
@@ -52,10 +52,10 @@ class DeliveryLPSolver extends DeliverySolver{
 class Group {
 - id: int
 - tutor: Tutor
-+ assign(item, Group group):void
++ assign(item, Group group): void
 - assign_tutor(Tutor tutor)
-- assign_date(DeliveryDate dd)
-+ preference_of(int item_id )
+- assign_date(DeliveryDate date)
++ preference_of(Topic topic)
 }
 
 class Tutor{
@@ -63,7 +63,7 @@ class Tutor{
 - groups: List<Group>
 - name: String
 - email: String
-+ assign_group(Group group):void
++ assign_group(Group group): void
 }
 
 interface TutorState{}
@@ -76,7 +76,7 @@ class FinalStateGroup implements GroupState {
 - assigned_date: DeliveryDate
 - remove_dates(List<DeliveryDate> dates): void
 - is_tutored_by(Tutor tutor): bool
-- assign_date(DeliveryDate dd)
+- assign_date(DeliveryDate date)
 + avaliable_dates(): List<DeliveryDate>
 + assign(item, Group group):void
 
@@ -84,22 +84,20 @@ class FinalStateGroup implements GroupState {
 
 class InitialStateGroup implements GroupState{
 - topics: List<Topic>
-+ assign(item, Group group):void
++ assign(item, Group group): void
 - assign_tutor(Tutor tutor)
 }
 
 class FinalStateTutor implements TutorState{
-- avaliable_dates: List<DeliveryDate>
+- available_dates: List<DeliveryDate>
 - assigned_dates: List<DeliveryDate>
-+ avaliable_dates(): List<DeliveryDate>
++ available_dates(): List<DeliveryDate>
 + id(): int
 }
 
 class InitialStateTutor implements TutorState{
 - topics: List<Topic>
-- global_capacity: int
-
-+ id(): int
+- capacity: int
 }
 
 class DeliveryDate{
@@ -112,28 +110,26 @@ class DeliveryDate{
 
 class Topic{
 - id: int
+- title: String
 - cost: int
 - capacity: int
-- title: String
 }
 
-class AssigmentResult{
+class AssigmentResult {
 - id: int
 - groups: List<Group>
 - tutors: List<Tutor>
-- evaluators: List<Evaluators>
+- evaluators: List<Evaluator>
 
-+ delivery_date(int group_id): DeliveryDate
-+ delivery_date_evaluator(int evaluator_id)
++ delivery_date(Group group): DeliveryDate
++ delivery_dates_evaluator(Evaluator evaluator): List<DeliveryDate>
 }
-
-
 
 Tutor *-right- TutorState
 
 @enduml
 ```
-![image](https://github.com/trabajo-profesional-fiuba/.github/assets/56161645/c2c17a25-bb0e-42ee-8d16-e6a4a919d0e0)
+![class-diagram](https://github.com/trabajo-profesional-fiuba/.github/assets/67125933/c826b85d-4097-40a9-bb1f-29712aa2b429)
 
 ## Estructura del proyecto
 
