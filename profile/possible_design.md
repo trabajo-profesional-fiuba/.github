@@ -8,131 +8,94 @@ El objetivo de este documento es alinear las diferentes entidades comunes que us
 Diagrama de clases principales que sirven para la resolucion de los algoritmos
 ```plantuml
 @startuml
-abstract class Solver {
-~ groups: List<Group>
-~ tutors: List<Tutor>
-+ solve(): AssigmentResult 
+class DeliveryDate {
+- week: int
+- day: int
+- hour: int
++ label(): String
 }
 
-
-abstract class DeliverySolver extends Solver{
-~ available_dates: List<DeliveryDate>
-+ solve(): AssigmentResult
+class Tutor {
+- id: int
+- name: String
+- email: String
+- groups: List[Group]
++ assign_group(group: Group): None
 }
 
-abstract class GroupTutorSolver extends Solver{
-~ topics: List<Topic>
-+ solve(): AssigmentResult
+class FinalStateTutor {
+- id: int
+- available_dates: List[DeliveryDate]
+- assigned_dates: List[DeliveryDate]
 }
 
-interface OutputFormatter {}
-
-Solver o-up-OutputFormatter
-
-class DeliveryFlowSolver extends DeliverySolver{
-- evaluators: evaluators
-- possible_dates: List<DeliveryDate>
-
-- create_source_edges(List nodes, int base_capacity )
-- create_sink_edges(List nodes, int base_capacity)
-- create_groups_graph(): DiGraph
-- create_evaluator_graph(): DiGraph
-- max_flow_min_cost(DiGraph graph): Dict
-+ solve(): AssigmentResult 
-}
-
-class TopicTutorFlowSolver extends GroupTutorSolver {
-+ solve(): AssigmentResult 
-}
-
-class DeliveryLPSolver extends DeliverySolver{
-+ solve(): AssigmentResult 
-}
+Tutor *-right- FinalStateTutor
 
 class Group {
 - id: int
 - tutor: Tutor
-+ assign(item, Group group): void
-- assign_tutor(Tutor tutor)
-- assign_date(DeliveryDate date)
-+ preference_of(Topic topic)
++ assign_date(date: DeliveryDate)
++ assigned_date(): DeliveryDate
++ available_dates(): List[DeliveryDate]
++ add_available_dates(dates: List[DeliveryDate]): None
++ remove_dates(dates: List[DeliveryDate]): None
++ filter_dates(dates: List[DeliveryDate]): List[DeliveryDate]
 }
 
-class Tutor{
-- id: int
-- groups: List<Group>
-- name: String
-- email: String
-+ assign_group(Group group): void
-}
-
-interface TutorState{}
-interface GroupState{}
-
-Group *-right- GroupState
-
-class FinalStateGroup implements GroupState {
-- avaliable_dates: List<DeliveryDate>
+class FinalStateGroup {
+- available_dates: List[DeliveryDate]
 - assigned_date: DeliveryDate
-- remove_dates(List<DeliveryDate> dates): void
-- is_tutored_by(Tutor tutor): bool
-- assign_date(DeliveryDate date)
-+ avaliable_dates(): List<DeliveryDate>
-+ assign(item, Group group):void
-
+- remove_dates(dates: List[DeliveryDate]): None
+- assign_date(date: DeliveryDate): None
++ available_dates(): List[DeliveryDate]
 }
 
-class InitialStateGroup implements GroupState{
-- topics: List<Topic>
-+ assign(item, Group group): void
-- assign_tutor(Tutor tutor)
-}
-
-class FinalStateTutor implements TutorState{
-- available_dates: List<DeliveryDate>
-- assigned_dates: List<DeliveryDate>
-+ available_dates(): List<DeliveryDate>
-+ id(): int
-}
-
-class InitialStateTutor implements TutorState{
-- topics: List<Topic>
-- capacity: int
-}
-
-class DeliveryDate{
-- week: int
-- day: int
-- hour: int
-
-+ label(): String
-}
-
-class Topic{
-- id: int
-- title: String
-- cost: int
-- capacity: int
-}
+Group *-right- FinalStateGroup
 
 class AssigmentResult {
-- id: int
-- groups: List<Group>
-- tutors: List<Tutor>
-- evaluators: List<Evaluator>
-
-+ delivery_date(Group group): DeliveryDate
-+ delivery_dates_evaluator(Evaluator evaluator): List<DeliveryDate>
+- groups: List[Group]
+- evaluators: List[Evaluator]
++ delivery_date_group(group: Group): DeliveryDate
++ delivery_dates_evaluator(evaluator: Evaluator): List[DeliveryDate]
 }
 
-Tutor *-right- TutorState
+abstract class DeliverySolver {
+- available_dates: List<DeliveryDate>
++ solve(): AssigmentResult
+}
 
+abstract class OutputFormatter {
++ create_formatter(result_type: Union[dict, list]): Union[FlowOutputFormatter, LPOutputFormatter]
++ format_result(result: Union[Dict, List], groups: List[Group], evaluators: List[Evaluator])
+}
+
+DeliverySolver o-up-OutputFormatter
+
+class FlowOutputFormatter {
++ get_result(result: Dict, groups: List[Group], evaluators: List[Evaluator]): AssigmentResult
+}
+
+class LPOutputFormatter {
++ get_result(result: Dict, groups: List[Group], evaluators: List[Evaluator]): AssigmentResult
+}
+
+class DeliveryFlowSolver extends DeliverySolver {
+- evaluators: List[Evaluator]
+- possible_dates: List[DeliveryDate]
+- create_groups_graph(): DiGraph
+- create_evaluator_graph(): DiGraph
+- max_flow_min_cost(graph: DiGraph): Dict
++ solve(): AssigmentResult 
+}
+
+class DeliveryLPSolver extends DeliverySolver {
++ solve(): AssignmentResult 
+}
 @enduml
 ```
-![class-diagram](https://github.com/trabajo-profesional-fiuba/.github/assets/67125933/c826b85d-4097-40a9-bb1f-29712aa2b429)
+![class-diagram](https://github.com/trabajo-profesional-fiuba/.github/assets/67125933/3d36cb1f-eda3-40fc-8c20-15f7c1d8e09f)
 
 ## Estructura del proyecto
-
 ```
 assignment-service/
 ├── pyproject.toml
