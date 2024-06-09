@@ -104,20 +104,51 @@ assignment-service/
 ├── .gitignore
 ├── 
 ├── src/
-│   └── algorithms/
+│   └── assignments/
 │       ├── __init__.py
-│       └── ...
+│       └── date/
+│         ├── lp/
+│             ├── delivery_evaluators_lp_solver.py
+│             ├── delivery_lp_solver.py
+│             ├── delivery_tutors_lp_solver.py
+│         ├── delivery_flow_solver.py
+│         ├── delivery_solver.py
+│       └── topic_tutor/
+│   └── io/
+│       ├── output/
+│             ├── output_formatter.py
+│             ├── flow_output_formatter.py
+│             ├── lp_formatter.py
+│       ├── input_formatter.py
 │   └── model/
 │       ├── group/
+│             ├── group.py
+│             ├── final_state_group.py
 │       ├── tutor/
+│             ├── tutor.py
+│             ├── final_state_tutor.py
 │       └── utils/
-│         ├── delivery_date/
+│         ├── delivery_date.py
 │         ├── evaluator.py
 │         ├── topic.py
+│         ├── result.py
+│   └── constants.py
+│   └── exceptions.py
 │── tests/
-│   ├── __init__.py
-│   └── ...
-    
+│   └── assignments/
+│       └── date/
+│         ├── delivery_flow_solver_test.py
+│         ├── delivery_lp_solver_test.py
+│         ├──helper.py
+│       └── topic_tutor/
+│   └── io/
+│       ├── output/
+│             ├── output_formatter.py
+│             ├── flow_output_formatter.py
+│             ├── lp_formatter.py
+│       ├── input_formatter.py
+│   └── model/
+│         ├── evaluator_test.py
 ```
 ## Possible Folder Structure
 
