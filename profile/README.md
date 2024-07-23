@@ -28,7 +28,10 @@ El informe tiene como objetivo formalizar el trabajo que se realiza durante los 
 Durante los meses de desarrollo se ira agregando, modificando y borrando diferentes aspectos del siguiente [Informe](https://docs.google.com/document/d/1OGQHTen0Jq10fhsqWkeuYwOUYCHxB5LMsyyRzwK2HSs/edit?usp=sharing). En el se encuentran secciones donde se detalla las distintas decisiones, algoritmos y pruebas que el equipo realizo. 
 
 ## Arquitectura 👷
+La arquitectura actual, atada a libre de cambios se encuentra en el siguiente estado
+![image](https://github.com/user-attachments/assets/c8815872-61b7-4610-bbce-4edd451b4cdd)
 
+Uno de los objetivos actuales, es la implementacion de una red de contenedores para mejorar la performance de la app.
 
 ## Documentación 📗
 
