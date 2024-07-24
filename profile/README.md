@@ -44,6 +44,8 @@ Ademas, las issues siguen un workflow que se encuentra en formato de tablero [Ka
 
 **Time Tracking** ⏲️. Para poder registrar la cantidad de tiempo que nos llevan las tareas se propone utilizar [Eventhout](https://app.everhour.com/) que al integrarlo con Github podremos agregar hrs a las Issues que se encuentran abiertas. Estos registros serviran como justificacion a preguntar relacionadas a features no implementadas por falta de tiempos suficiente
 
+Para los **PRs**, hemos adoptado una IA que nos realiza un resumen de lo realizado, esta es invocada llamando dentro de la descripciona la hora de crear el PR `@coderabbitai summary`
+
 ### Diseño 🖌️
 todo: Agregar diagramas UML
 
