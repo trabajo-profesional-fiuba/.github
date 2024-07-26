@@ -3,10 +3,10 @@ Detallamos las siguientes epicas para poder alinear los estados en los que anda 
 ## Backend
 
 ### Autenticacion
-Login
+~~Login
 Como usuario\
 quiero poder loggearme con email y contraseña\
-para recibir un JWT con mi rol, nombre e id.
+para recibir un JWT con mi rol, nombre e id.~~
 
 ### Tutores
 Como rol tutor\
