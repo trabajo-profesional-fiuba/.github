@@ -35,6 +35,11 @@ Durante los meses de desarrollo se ira agregando, modificando y borrando diferen
 La arquitectura actual, atada a libre de cambios se encuentra en el siguiente estado
 ![image](https://github.com/user-attachments/assets/c8815872-61b7-4610-bbce-4edd451b4cdd)
 
+Podemos ver al backend de esta manera
+
+![image](https://github.com/user-attachments/assets/f9a667b7-c1dc-4274-8746-f7715012be83)
+
+
 Uno de los objetivos actuales, es la implementacion de una red de contenedores para mejorar la performance de la app.
 
 ## Documentación 📗
