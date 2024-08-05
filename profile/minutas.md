@@ -9,4 +9,4 @@ El siguiente texto tiene como objetivo detallar los puntos importantes que vamos
 - Necesitamos las columnas: `LEGAJO(PADRON),NOMBRE,APELLIDO,EMAIL` - Evaluar si no debemos hacerlos desde el lado del backend.
 - Recordarle a Carlos el servidor
 - Posterior a cargar los csv agregar tabla con los resultados
-
+- Si alumno selecciona "tengo tema y tutor, darle la posibilidad de poner el tema y el tutor (mail del tutor)"
