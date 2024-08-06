@@ -39,6 +39,9 @@ Podemos ver al backend de esta manera
 
 ![image](https://github.com/user-attachments/assets/f9a667b7-c1dc-4274-8746-f7715012be83)
 
+Y actualmente la base de datos se encuentra con las siguientes tablas
+![image](https://github.com/user-attachments/assets/cd44b8a2-d3d7-4901-8192-0b1d1c49c907)
+
 
 Uno de los objetivos actuales, es la implementacion de una red de contenedores para mejorar la performance de la app.
 
