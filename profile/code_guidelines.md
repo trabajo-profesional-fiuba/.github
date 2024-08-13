@@ -103,7 +103,32 @@ Ejemplo de endpoint `GET /v1/people`
 
 ### Middleware y seguridad 🔒
 
-Se recomienda un buen uso consciente de middleware al igual que definir que endpoints necesitan hacer uso de `authentication & authorization`
+Se recomienda un buen uso consciente de middleware al igual que definir que endpoints necesitan hacer uso de `authentication & authorization`.
+
+### Endpoints
+
+Todos los endpoints de una entidad tienen que ir en un archivo `router.py`, en el se instancia una clase del tipo `APIRouter` donde se define un **prefix** y una lista de **tags** como se muestra a continuacion.
+```python
+router = APIRouter(prefix="/groups", tags=["Groups"])
+```
+
+Cada metodo dentro de los routers, estan definidos por una funcion async del estilo `async def function...` cuyo cuerpo esta dividido por un `try/except` donde se diferencian los deferentes `status_code` dependiendo del tipo de excepcion que el endpoint genera. Ademas se deben para cada endpoint especificar los siguientes campos que luego seran de utilidad en la documentacion.
+```python
+@router.get(
+    "/",
+    response_model=ResponseSchema,
+    description="description of what the endpoint does",
+    status_code=status.HTTP_200_OK, # status code provided by status library
+    responses={
+        status.HTTP_404_NOT_FOUND: {
+            "description": "Uid is not present inside the database"
+        },
+        status.HTTP_409_CONFLICT: {"description": "There are user_ids duplicated"},
+    }, # Another resposes based on the exception. Each one with the correct description.
+)
+```
+
+De esta manera, cada endpoint tendra un minimo estandar que todos comparten
 
 ## Github
 
