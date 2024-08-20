@@ -10,6 +10,8 @@ El propósito de este documento es normalizar el desarrollo del equipo. De esta 
 
 ## Python
 
+Es muy recomendable seguir con lo que dice [la siguiente pagina](https://docs.python-guide.org/) respecto de diferentes convenciones y buenas prácticas.
+
 Se seguirá un standard [PEP8](https://peps.python.org/pep-0008/) para el desarrollo en python. Este convencion posee algunas caracteristicas, por ejemplo:
 
 ```python
