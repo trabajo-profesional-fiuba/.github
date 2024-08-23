@@ -64,8 +64,8 @@ todo: Agregar diagramas UML
 
 ## Postman 🚀
 
-- Describe la colección pública en Postman que está relacionada con la API.
-- Proporciona instrucciones sobre cómo los usuarios pueden importar y utilizar esta colección para probar los endpoints de la API.
+Para tener acceso al Postman de la API se debe ingresar a partir de este [link](https://app.getpostman.com/join-team?invite_code=98ac4ea28acd62d5fa988f0261e2a9f8&target_code=bd708755cad581b35e711f76cdf05326)
+
 
 ## Licencias
 
