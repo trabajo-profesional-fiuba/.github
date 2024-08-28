@@ -32,6 +32,9 @@ Durante los meses de desarrollo se ira agregando, modificando y borrando diferen
 
 
 ## Arquitectura 👷
+
+![image](https://github.com/user-attachments/assets/36ad7ff3-870b-4658-afa4-2f25bc3febb2)
+
 La arquitectura actual, atada a libre de cambios se encuentra en el siguiente estado
 ![image](https://github.com/user-attachments/assets/c8815872-61b7-4610-bbce-4edd451b4cdd)
 
