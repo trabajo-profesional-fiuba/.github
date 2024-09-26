@@ -15,11 +15,15 @@
 | Tutor    | Carlos Fontela       | cfontela@fi.uba.ar  |
 | Co-tutor | Iván Terzano         | iterzano@fi.uba.ar  |
 
-## Introducción 📝
+## Motivación 🏆
 
-En esta sección, proporciona una breve descripción de la API, su propósito y los beneficios que ofrece. Menciona cualquier contexto relevante o información importante que los usuarios deban saber antes de usar la API.
+El cambio de plan de carrera de Ingenieria Infomatica en el año 2023 abrio la posibilidad de una nueva materia para facilitarle a los estudiantes el desarrollo y entrega de su Trabajo Profesional, facilitando las etapas que en años anteriores solían poner trabas en el proceso a tal punto que habia alumnos a punto de recibirse que decidian dejar la carrera dado que no podian avanzar con esta etapa final.
 
-Se recomienda fuertemente leer los [**Code Guidelines**](https://github.com/trabajo-profesional-fiuba/.github/blob/main/profile/code_guidelines.md)
+Como toda materia reciente, presenta muchisimos desafios y sorpresas que no estan contempladas al momento de su creación. 
+
+Nosotros, tenemos el objetivo de facilitar, automatizar y mejorar la calidad de la materia desde el lado de la ingenieria informatica, aplicando herramientas, técnicas y metodologias para desarrollar un software que proporcione todas las cualidades mencionadas anteriormente.
+
+Nos guiamos con la filosofia _"El valor que estamos aportando, es mejor que lo antes habia?"_.
 
 ## Informe
 
@@ -27,48 +31,30 @@ El informe tiene como objetivo formalizar el trabajo que se realiza durante los 
 
 Durante los meses de desarrollo se ira agregando, modificando y borrando diferentes aspectos del siguiente [Informe](https://docs.google.com/document/d/1OGQHTen0Jq10fhsqWkeuYwOUYCHxB5LMsyyRzwK2HSs/edit?usp=sharing). En el se encuentran secciones donde se detalla las distintas decisiones, algoritmos y pruebas que el equipo realizo.
 
-### Minutas con el tutor
+## Minutas con el tutor
 [Minutas con Carlos](https://github.com/trabajo-profesional-fiuba/.github/blob/main/profile/minutas.md)
-
 
 ## Arquitectura 👷
 
-![image](https://github.com/user-attachments/assets/36ad7ff3-870b-4658-afa4-2f25bc3febb2)
+Nuestra arquitectura principal se encuentra montada en la **nube**. Utilizamos como provedores **Microsoft Azure** y **Render**.
 
-La arquitectura actual, atada a libre de cambios se encuentra en el siguiente estado
-![image](https://github.com/user-attachments/assets/c8815872-61b7-4610-bbce-4edd451b4cdd)
+La **calidad** del desarrollo y la facilidad de integrar codigo constantemente y dinamicamente es algo principal que el equipo busca y trata de seguir las mejores practicas dentro de las posibilidades que actualmente tenemos en terminos de tiempos y costos.
 
-Podemos ver al backend de esta manera
+![image](https://github.com/user-attachments/assets/9bf66605-c82e-41bd-b211-7c5cd4c4a72b)
 
-![image](https://github.com/user-attachments/assets/f9a667b7-c1dc-4274-8746-f7715012be83)
+## Desarrollo 📑
 
-Y actualmente la base de datos se encuentra con las siguientes tablas
-![image](https://github.com/user-attachments/assets/cd44b8a2-d3d7-4901-8192-0b1d1c49c907)
+Cada repositorio posee en sus `README.md` informacion relevante apropiada a ese proyecto. Ambos proyectos comparten el mismo backlog y Kanba board donde los tickets tienen un seguimiento mediante propiedades. 
 
-
-Uno de los objetivos actuales, es la implementacion de una red de contenedores para mejorar la performance de la app.
-
-## Documentación 📗
-
-### Task & Workflows 📑
 El equipo de desarrollo sigue la metodologia de trabajo agil, tomando componenentes de Scrum para poder organizar su trabajo de la mejor manera posible.
 
 Para eso cada tarea se encuentra descripta en el [Backlog](https://github.com/orgs/trabajo-profesional-fiuba/projects/1) donde se detalla la `Priority`, `Kind` y `Status`. De esta manera las tareas poseen diferentes categorias que hacen que el equipo elija en cada sprint cuales son las necesarias para aportar la mayor cantidad de valor.
 
 Ademas, las issues siguen un workflow que se encuentra en formato de tablero [Kanban](https://github.com/orgs/trabajo-profesional-fiuba/projects/1/views/2) donde cada tarea pasa por diferentes estados antes de ser cerrada.
 
-**Time Tracking** ⏲️. Para poder registrar la cantidad de tiempo que nos llevan las tareas se propone utilizar [Eventhout](https://app.everhour.com/) que al integrarlo con Github podremos agregar hrs a las Issues que se encuentran abiertas. Estos registros serviran como justificacion a preguntar relacionadas a features no implementadas por falta de tiempos suficiente
+**Time Tracking** ⏲️. Para poder registrar la cantidad de tiempo que nos llevan las tareas se propone utilizar Google Calendar, donde se registra la tarea como un evento que pertence al calendario que el grupo armo. Luego, cada domingo se corre un script automatizado que recorre los eventos y construye una planilla de datos con los mismos.
 
-Para los **PRs**, hemos adoptado una IA que nos realiza un resumen de lo realizado, esta es invocada llamando dentro de la descripciona la hora de crear el PR `@coderabbitai summary`
-
-### Diseño 🖌️
-todo: Agregar diagramas UML
-
-
-## Postman 🚀
-
-Para tener acceso al Postman de la API se debe ingresar a partir de este [link](https://app.getpostman.com/join-team?invite_code=98ac4ea28acd62d5fa988f0261e2a9f8&target_code=bd708755cad581b35e711f76cdf05326)
-
+Para los **PRs**, hemos adoptado una IA que nos realiza un resumen de lo realizado, esta es invocada llamando dentro de la descripciona la hora de crear el PR `@coderabbitai summary`. 
 
 ## Licencias
 
